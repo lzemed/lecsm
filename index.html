@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luiz Eduardo Costa &mdash; Serviços Médicos | Anestesiologia</title>
+    <meta name="description" content="Serviços médicos em anestesiologia com ética, profissionalismo e atualização científica. Conforto e segurança para o paciente em cada procedimento.">
+    <meta name="author" content="Dr. Luiz Eduardo Costa">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Luiz Eduardo Costa — Serviços Médicos">
+    <meta property="og:description" content="Anestesiologia com ética, profissionalismo e foco no conforto do paciente.">
+    <meta property="og:locale" content="pt_BR">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <style>
+        :root {
+            --navy-900: #0A1F3D;
+            --navy-800: #0E2A52;
+            --navy-700: #14365E;
+            --navy-600: #1E456E;
+            --gold: #C9A961;
+            --gold-light: #DEC287;
+            --gold-dark: #A88A47;
+            --champagne: #F4ECD8;
+            --ivory: #FAF7F1;
+            --paper: #FFFFFF;
+            --ink: #14233A;
+            --ink-soft: #4A5568;
+            --line: rgba(201, 169, 97, 0.18);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--ink);
+            background: var(--ivory);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+        }
+
+        a { color: var(--navy-700); text-decoration: none; transition: color .2s; }
+        a:hover { color: var(--gold-dark); }
+
+        img { max-width: 100%; display: block; }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* ---------- NAV ---------- */
+        .nav {
+            position: sticky; top: 0; z-index: 50;
+            background: rgba(250, 247, 241, 0.92);
+            backdrop-filter: saturate(180%) blur(14px);
+            -webkit-backdrop-filter: saturate(180%) blur(14px);
+            border-bottom: 1px solid var(--line);
+        }
+        .nav-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 18px 32px; max-width: 1180px; margin: 0 auto;
+        }
+        .brand {
+            display: flex; align-items: center; gap: 14px;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600; font-size: 20px; color: var(--navy-900);
+            letter-spacing: 0.01em;
+        }
+        .brand-mark {
+            width: 38px; height: 38px;
+            display: grid; place-items: center;
+            background: var(--navy-900);
+            border-radius: 50%;
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px; font-weight: 700;
+            letter-spacing: -0.02em;
+            box-shadow: 0 4px 14px rgba(10, 31, 61, 0.18);
+            border: 1px solid var(--gold);
+        }
+        .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .brand-text small {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px; font-weight: 500; letter-spacing: 0.18em;
+            text-transform: uppercase; color: var(--gold-dark);
+            margin-top: 3px;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-size: 13.5px; font-weight: 500;
+            color: var(--navy-700);
+            letter-spacing: 0.02em;
+        }
+        .nav-cta {
+            background: var(--navy-900);
+            color: var(--ivory) !important;
+            padding: 10px 22px;
+            border-radius: 999px;
+            font-size: 13px !important;
+            font-weight: 500;
+            border: 1px solid var(--navy-900);
+            transition: all .25s;
+        }
+        .nav-cta:hover { background: transparent; color: var(--navy-900) !important; }
+        @media (max-width: 720px) {
+            .nav-links a:not(.nav-cta) { display: none; }
+        }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 60%, var(--navy-700) 100%);
+            color: var(--ivory);
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(201, 169, 97, 0.18), transparent 45%),
+                radial-gradient(circle at 10% 90%, rgba(201, 169, 97, 0.10), transparent 40%);
+            pointer-events: none;
+        }
+        .hero-grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 64px;
+            align-items: center;
+            padding: 96px 32px 110px;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 48px; padding: 72px 32px 80px; }
+        }
+
+        .hero-eyebrow {
+            display: inline-flex; align-items: center; gap: 10px;
+            font-size: 12px; font-weight: 500;
+            letter-spacing: 0.22em; text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 22px;
+        }
+        .hero-eyebrow::before {
+            content: ''; width: 32px; height: 1px; background: var(--gold);
+        }
+        .hero h1 {
+            font-size: clamp(40px, 5.2vw, 60px);
+            line-height: 1.05;
+            color: #fff;
+            margin-bottom: 22px;
+        }
+        .hero h1 em {
+            font-style: italic; color: var(--gold-light);
+            font-weight: 500;
+        }
+        .hero-sub {
+            font-size: 17px;
+            color: rgba(255,255,255,0.78);
+            max-width: 520px;
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+        .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 14px 28px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px; font-weight: 500;
+            letter-spacing: 0.02em;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all .25s ease;
+        }
+        .btn-gold {
+            background: var(--gold);
+            color: var(--navy-900);
+            border-color: var(--gold);
+        }
+        .btn-gold:hover {
+            background: var(--gold-light); border-color: var(--gold-light);
+            color: var(--navy-900);
+            transform: translateY(-1px);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--ivory);
+            border-color: rgba(255,255,255,0.25);
+        }
+        .btn-ghost:hover {
+            border-color: var(--gold);
+            color: var(--gold-light);
+        }
+
+        /* hero illustration */
+        .hero-art {
+            position: relative;
+            aspect-ratio: 4 / 5;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+            border: 1px solid rgba(201, 169, 97, 0.25);
+        }
+        .hero-art .frame {
+            position: absolute; inset: 14px;
+            border: 1px solid rgba(201, 169, 97, 0.45);
+            pointer-events: none;
+            z-index: 2;
+        }
+        .hero-art img {
+            width: 100%; height: 100%; object-fit: cover;
+            filter: brightness(0.92) contrast(1.05);
+        }
+        .hero-art .caption {
+            position: absolute; left: 0; right: 0; bottom: 0;
+            padding: 26px;
+            background: linear-gradient(0deg, rgba(10,31,61,0.92) 0%, transparent 100%);
+            color: var(--gold-light);
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 16px;
+            z-index: 3;
+        }
+
+        /* ---------- SECTION SCAFFOLD ---------- */
+        section { padding: 110px 0; }
+        @media (max-width: 720px) { section { padding: 80px 0; } }
+
+        .eyebrow {
+            display: inline-flex; align-items: center; gap: 12px;
+            font-size: 11px; font-weight: 600;
+            letter-spacing: 0.26em; text-transform: uppercase;
+            color: var(--gold-dark);
+            margin-bottom: 18px;
+        }
+        .eyebrow::before {
+            content: ''; width: 28px; height: 1px; background: var(--gold);
+        }
+
+        h2.section-title {
+            font-size: clamp(32px, 3.8vw, 46px);
+            color: var(--navy-900);
+            margin-bottom: 18px;
+            max-width: 720px;
+        }
+        .section-lede {
+            font-size: 17px; color: var(--ink-soft);
+            max-width: 660px;
+            margin-bottom: 56px;
+        }
+
+        /* ---------- ABOUT ---------- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+        @media (max-width: 900px) {
+            .about-grid { grid-template-columns: 1fr; gap: 48px; }
+        }
+
+        .about-figure {
+            position: relative;
+            aspect-ratio: 4 / 5;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 22px 50px rgba(10, 31, 61, 0.18);
+        }
+        .about-figure img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .about-figure::after {
+            content: '';
+            position: absolute;
+            top: 18px; left: 18px; right: 18px; bottom: 18px;
+            border: 1px solid rgba(201, 169, 97, 0.7);
+            pointer-events: none;
+        }
+
+        .about-body p {
+            font-size: 16.5px;
+            color: var(--ink);
+            margin-bottom: 18px;
+            line-height: 1.85;
+        }
+        .about-body .pull {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px; font-style: italic;
+            color: var(--navy-700);
+            line-height: 1.4;
+            border-left: 2px solid var(--gold);
+            padding-left: 22px;
+            margin: 28px 0;
+        }
+        .about-stats {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 28px; margin-top: 36px;
+            padding-top: 28px;
+            border-top: 1px solid var(--line);
+        }
+        .stat .num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px; font-weight: 600;
+            color: var(--gold-dark);
+            line-height: 1;
+        }
+        .stat .lbl {
+            font-size: 12px; font-weight: 500;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--ink-soft);
+            margin-top: 8px;
+        }
+
+        /* ---------- SERVICES ---------- */
+        #servicos {
+            background: var(--paper);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 12px;
+        }
+        @media (max-width: 900px) {
+            .services-grid { grid-template-columns: 1fr; }
+        }
+
+        .service-card {
+            background: var(--ivory);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 40px 32px;
+            transition: all .35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 2px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .4s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 40px rgba(10, 31, 61, 0.10);
+            border-color: rgba(201, 169, 97, 0.4);
+        }
+        .service-card:hover::before { transform: scaleX(1); }
+
+        .service-icon {
+            width: 52px; height: 52px;
+            display: grid; place-items: center;
+            background: var(--navy-900);
+            color: var(--gold-light);
+            border-radius: 50%;
+            margin-bottom: 22px;
+        }
+        .service-icon svg { width: 22px; height: 22px; }
+
+        .service-card h3 {
+            font-size: 24px;
+            color: var(--navy-900);
+            margin-bottom: 12px;
+        }
+        .service-card p {
+            font-size: 15px;
+            color: var(--ink-soft);
+            line-height: 1.75;
+        }
+
+        /* ---------- PRINCIPLES ---------- */
+        #principios { background: var(--ivory); }
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            margin-top: 16px;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+        @media (max-width: 900px) {
+            .principles-grid { grid-template-columns: 1fr; }
+        }
+        .principle {
+            padding: 44px 36px;
+            border-right: 1px solid var(--line);
+            position: relative;
+        }
+        .principle:last-child { border-right: none; }
+        @media (max-width: 900px) {
+            .principle { border-right: none; border-bottom: 1px solid var(--line); }
+            .principle:last-child { border-bottom: none; }
+        }
+        .principle .num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 14px;
+            color: var(--gold-dark);
+            letter-spacing: 0.2em;
+            margin-bottom: 18px;
+        }
+        .principle h3 {
+            font-size: 26px;
+            color: var(--navy-900);
+            margin-bottom: 14px;
+        }
+        .principle p {
+            font-size: 15px;
+            color: var(--ink-soft);
+            line-height: 1.75;
+        }
+
+        /* ---------- PREVIANEST SHOWCASE ---------- */
+        #previanest {
+            background: var(--paper);
+            border-top: 1px solid var(--line);
+            position: relative;
+            overflow: hidden;
+        }
+        #previanest::before {
+            content: '';
+            position: absolute;
+            top: -200px; right: -200px;
+            width: 540px; height: 540px;
+            background: radial-gradient(circle, rgba(201, 169, 97, 0.08), transparent 65%);
+            pointer-events: none;
+        }
+        .pv-grid {
+            display: grid;
+            grid-template-columns: 1fr 0.85fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+        }
+        @media (max-width: 900px) {
+            .pv-grid { grid-template-columns: 1fr; gap: 56px; }
+        }
+
+        .pv-tag {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: rgba(10, 31, 61, 0.04);
+            border: 1px solid var(--line);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+            margin-bottom: 24px;
+        }
+        .pv-tag::before {
+            content: ''; width: 6px; height: 6px;
+            background: var(--gold); border-radius: 50%;
+        }
+        #previanest h2 {
+            font-size: clamp(34px, 4vw, 48px);
+            color: var(--navy-900);
+            margin-bottom: 22px;
+        }
+        #previanest h2 em {
+            font-style: italic;
+            color: var(--gold-dark);
+            font-weight: 500;
+        }
+        .pv-lede {
+            font-size: 17px;
+            color: var(--ink-soft);
+            line-height: 1.75;
+            max-width: 540px;
+            margin-bottom: 32px;
+        }
+        .pv-features {
+            list-style: none;
+            margin: 0 0 36px;
+            padding: 0;
+            display: grid;
+            gap: 14px;
+        }
+        .pv-features li {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            font-size: 15px;
+            color: var(--ink);
+            line-height: 1.6;
+        }
+        .pv-features li::before {
+            content: '';
+            min-width: 16px; height: 16px;
+            margin-top: 5px;
+            background: var(--navy-900);
+            border-radius: 50%;
+            position: relative;
+            background-image: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.15);
+        }
+        .pv-features strong {
+            color: var(--navy-900);
+            font-weight: 600;
+        }
+
+        .pv-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+        .btn-navy {
+            background: var(--navy-900);
+            color: var(--ivory);
+            border-color: var(--navy-900);
+        }
+        .btn-navy:hover {
+            background: var(--navy-700); border-color: var(--navy-700);
+            transform: translateY(-1px);
+        }
+        .btn-line {
+            background: transparent;
+            color: var(--navy-900);
+            border-color: var(--navy-900);
+        }
+        .btn-line:hover {
+            background: var(--navy-900); color: var(--ivory);
+        }
+
+        /* device showcase */
+        .pv-device {
+            position: relative;
+            margin: 0 auto;
+            max-width: 320px;
+            aspect-ratio: 9 / 18;
+            background: linear-gradient(160deg, #0a1f3d, #0e2a52 60%, #14365e);
+            border-radius: 42px;
+            padding: 14px;
+            box-shadow:
+                0 40px 80px -20px rgba(10, 31, 61, 0.45),
+                0 0 0 1px rgba(201, 169, 97, 0.25),
+                inset 0 0 0 1.5px rgba(201, 169, 97, 0.18);
+        }
+        .pv-device::before {
+            content: '';
+            position: absolute;
+            top: 22px; left: 50%;
+            transform: translateX(-50%);
+            width: 90px; height: 22px;
+            background: #050d1d;
+            border-radius: 999px;
+            z-index: 4;
+        }
+        .pv-screen {
+            position: relative;
+            width: 100%; height: 100%;
+            background: linear-gradient(180deg, #0e2a52 0%, #0A1F3D 60%, #050d1d 100%);
+            border-radius: 30px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 22px 28px;
+            color: var(--ivory);
+            text-align: center;
+        }
+        .pv-screen::before {
+            content: '';
+            position: absolute; inset: 0;
+            background:
+                radial-gradient(circle at 50% 30%, rgba(201, 169, 97, 0.18), transparent 50%),
+                radial-gradient(circle at 50% 90%, rgba(201, 169, 97, 0.10), transparent 50%);
+            pointer-events: none;
+        }
+        .pv-app-icon {
+            position: relative;
+            width: 96px; height: 96px;
+            background: linear-gradient(160deg, #1E456E, #0A1F3D);
+            border-radius: 22px;
+            display: grid; place-items: center;
+            box-shadow:
+                0 20px 40px -10px rgba(0, 0, 0, 0.5),
+                inset 0 0 0 1px rgba(201, 169, 97, 0.4);
+            margin-bottom: 24px;
+            z-index: 2;
+        }
+        .pv-app-icon span {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+            letter-spacing: -0.02em;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+        .pv-app-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 6px;
+            position: relative; z-index: 2;
+        }
+        .pv-app-sub {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 28px;
+            position: relative; z-index: 2;
+        }
+        .pv-pills {
+            display: flex; flex-direction: column; gap: 10px;
+            width: 100%;
+            position: relative; z-index: 2;
+        }
+        .pv-pill {
+            display: flex; align-items: center; gap: 10px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(201, 169, 97, 0.18);
+            border-radius: 12px;
+            padding: 10px 14px;
+            font-size: 11px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.85);
+            letter-spacing: 0.04em;
+        }
+        .pv-pill .dot {
+            width: 6px; height: 6px; border-radius: 50%;
+            background: var(--gold);
+            flex: 0 0 auto;
+        }
+
+        .pv-disclaimer {
+            margin-top: 56px;
+            padding-top: 32px;
+            border-top: 1px solid var(--line);
+            font-size: 13px;
+            color: var(--ink-soft);
+            font-style: italic;
+            text-align: center;
+            max-width: 720px;
+            margin-left: auto; margin-right: auto;
+        }
+
+        /* ---------- CREDENTIALS ---------- */
+        #credenciais {
+            background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+            color: var(--ivory);
+            position: relative;
+            overflow: hidden;
+        }
+        #credenciais::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(circle at 80% 30%, rgba(201, 169, 97, 0.12), transparent 50%);
+            pointer-events: none;
+        }
+        #credenciais .eyebrow { color: var(--gold-light); }
+        #credenciais .eyebrow::before { background: var(--gold); }
+        #credenciais h2.section-title { color: #fff; }
+        #credenciais .section-lede { color: rgba(255,255,255,0.75); }
+
+        .cred-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 48px;
+            margin-top: 24px;
+        }
+        @media (max-width: 720px) {
+            .cred-grid { grid-template-columns: 1fr; gap: 32px; }
+        }
+        .cred {
+            padding: 32px 0;
+            border-top: 1px solid rgba(201, 169, 97, 0.3);
+        }
+        .cred .label {
+            font-size: 11px; letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 14px;
+            font-weight: 500;
+        }
+        .cred .value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            color: #fff;
+            line-height: 1.4;
+        }
+        .cred .meta {
+            margin-top: 8px;
+            font-size: 13.5px;
+            color: rgba(255,255,255,0.65);
+        }
+
+        /* ---------- CONTACT ---------- */
+        #contato { background: var(--paper); }
+        .contact-card {
+            background: var(--ivory);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 56px 48px;
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .contact-card::before, .contact-card::after {
+            content: ''; position: absolute;
+            width: 40px; height: 40px;
+            border: 1px solid var(--gold);
+        }
+        .contact-card::before {
+            top: 18px; left: 18px;
+            border-right: none; border-bottom: none;
+        }
+        .contact-card::after {
+            bottom: 18px; right: 18px;
+            border-left: none; border-top: none;
+        }
+        .contact-card h2 {
+            font-size: 38px;
+            color: var(--navy-900);
+            margin-bottom: 18px;
+        }
+        .contact-card p {
+            font-size: 16px;
+            color: var(--ink-soft);
+            margin-bottom: 32px;
+            max-width: 520px;
+            margin-left: auto; margin-right: auto;
+        }
+        .contact-email {
+            display: inline-block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            color: var(--navy-900);
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 4px;
+        }
+        .contact-email:hover { color: var(--gold-dark); }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background: var(--navy-900);
+            color: rgba(255,255,255,0.6);
+            padding: 56px 0 32px;
+            font-size: 13px;
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .footer-brand {
+            color: var(--gold-light);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .footer-meta { line-height: 1.9; }
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(201, 169, 97, 0.18);
+            display: flex; justify-content: space-between; flex-wrap: wrap;
+            gap: 16px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+        }
+        .footer-bottom a { color: rgba(255,255,255,0.65); }
+        .footer-bottom a:hover { color: var(--gold-light); }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#top" class="brand">
+                <span class="brand-mark">L</span>
+                <span class="brand-text">
+                    Luiz Eduardo Costa
+                    <small>Serviços Médicos</small>
+                </span>
+            </a>
+            <div class="nav-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">Áreas de atuação</a>
+                <a href="#principios">Princípios</a>
+                <a href="#previanest">Previanest</a>
+                <a href="#contato" class="nav-cta">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="top" class="hero">
+        <div class="hero-grid">
+            <div>
+                <div class="hero-eyebrow">Anestesiologia &middot; desde a Alemanha</div>
+                <h1>Cuidado anestésico com <em>presença, técnica</em> e respeito ao paciente.</h1>
+                <p class="hero-sub">
+                    Serviços médicos em anestesiologia conduzidos com ética, profissionalismo e atualização científica permanente. Cada procedimento começa com uma escuta atenta — porque conforto e segurança caminham juntos.
+                </p>
+                <div class="hero-actions">
+                    <a href="#servicos" class="btn btn-gold">Conheça as áreas de atuação</a>
+                    <a href="#contato" class="btn btn-ghost">Entrar em contato</a>
+                </div>
+            </div>
+
+            <div class="hero-art">
+                <div class="frame"></div>
+                <img src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?auto=format&fit=crop&w=900&q=80" alt="Médico em ambiente clínico moderno conversando com paciente">
+                <div class="caption">"Aliviar a dor é, antes de tudo, um gesto humano."</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-figure">
+                    <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=900&q=80" alt="Estetoscópio sobre caderno de anotações clínicas">
+                </div>
+                <div class="about-body">
+                    <div class="eyebrow">Sobre o profissional</div>
+                    <h2 class="section-title">Uma trajetória construída ao redor do paciente.</h2>
+                    <p>
+                        A medicina, para mim, encontrou na anestesiologia o seu lugar mais íntimo. Iniciei minha carreira na Alemanha, onde a formação técnica e a cultura de segurança me ensinaram que cada detalhe importa — do diálogo pré-operatório à última hora de recuperação.
+                    </p>
+                    <p>
+                        Sigo nessa área pela paixão de estar ao lado de quem está em situação de vulnerabilidade. Atuo com método, rigor científico e a convicção de que o paciente é, sempre, o centro do cuidado.
+                    </p>
+
+                    <blockquote class="pull">
+                        "O melhor da anestesia é quase invisível: é quando o paciente acorda sem perceber o quanto foi cuidado."
+                    </blockquote>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="num">DE</div>
+                            <div class="lbl">Início na Alemanha</div>
+                        </div>
+                        <div class="stat">
+                            <div class="num">24/7</div>
+                            <div class="lbl">Atualização contínua</div>
+                        </div>
+                        <div class="stat">
+                            <div class="num">∞</div>
+                            <div class="lbl">Foco no paciente</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos">
+        <div class="container">
+            <div class="eyebrow">Áreas de atuação</div>
+            <h2 class="section-title">Cuidado especializado em três frentes.</h2>
+            <p class="section-lede">
+                Cada serviço é planejado individualmente, com avaliação criteriosa, escolha técnica adequada e acompanhamento próximo do início ao fim.
+            </p>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v6M9 5h6"/>
+                            <path d="M12 8c-3 0-5 2-5 5v6a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-6c0-3-2-5-5-5Z"/>
+                            <path d="M9 14h6"/>
+                        </svg>
+                    </div>
+                    <h3>Anestesiologia geral</h3>
+                    <p>
+                        Condução de anestesia para procedimentos cirúrgicos e diagnósticos, com escolha individualizada da técnica — geral, regional ou combinada — sempre que indicado.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 4h6v4H9z"/>
+                            <path d="M5 8h14v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8Z"/>
+                            <path d="M9 13h6M9 17h4"/>
+                        </svg>
+                    </div>
+                    <h3>Avaliação pré-anestésica</h3>
+                    <p>
+                        Consulta dedicada para identificar riscos, otimizar condições clínicas e construir, com transparência, um plano anestésico que o paciente entende e confia.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/>
+                        </svg>
+                    </div>
+                    <h3>Manejo da dor</h3>
+                    <p>
+                        Avaliação e tratamento de dor aguda e perioperatória, integrando técnicas farmacológicas e regionais para devolver conforto e funcionalidade.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRINCÍPIOS -->
+    <section id="principios">
+        <div class="container">
+            <div class="eyebrow">Princípios</div>
+            <h2 class="section-title">Três compromissos que orientam cada atendimento.</h2>
+
+            <div class="principles-grid">
+                <div class="principle">
+                    <div class="num">— I</div>
+                    <h3>Ética</h3>
+                    <p>
+                        Decisões clínicas baseadas em transparência, respeito à autonomia do paciente e fidelidade às melhores práticas profissionais.
+                    </p>
+                </div>
+                <div class="principle">
+                    <div class="num">— II</div>
+                    <h3>Profissionalismo</h3>
+                    <p>
+                        Postura técnica firme, comunicação cuidadosa com a equipe assistencial e responsabilidade integral pelo procedimento conduzido.
+                    </p>
+                </div>
+                <div class="principle">
+                    <div class="num">— III</div>
+                    <h3>Atualização científica</h3>
+                    <p>
+                        Estudo permanente de literatura, protocolos e novas técnicas — porque o que era padrão ontem nem sempre é o melhor para o paciente de hoje.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREVIANEST SHOWCASE -->
+    <section id="previanest">
+        <div class="container">
+            <div class="pv-grid">
+                <div>
+                    <div class="pv-tag">Tecnologia &middot; Produto próprio</div>
+                    <h2>Previanest. <em>Avaliação pré-anestésica</em> na palma da mão.</h2>
+                    <p class="pv-lede">
+                        Aplicativo desenvolvido por um anestesiologista, para anestesiologistas. Uma ferramenta clínico-educacional que reúne ficha pré-anestésica, escores validados e calculadoras de dosagem em uma experiência ágil, baseada em evidência e pensada para o contexto brasileiro.
+                    </p>
+
+                    <ul class="pv-features">
+                        <li><span><strong>Ficha pré-anestésica</strong> — paciente preenche voluntariamente, agilizando a consulta presencial.</span></li>
+                        <li><span><strong>40+ escores e escalas clínicas</strong> — ASA, Mallampati, RCRI, STOP-BANG, APACHE II e mais.</span></li>
+                        <li><span><strong>Calculadoras de dosagem</strong> — referências apoiadas em bulas ANVISA/FDA e protocolos da SBA.</span></li>
+                        <li><span><strong>Infográficos educativos</strong> — vias aéreas, bloqueadores neuromusculares, anestésicos locais, emergências.</span></li>
+                        <li><span><strong>Privacidade e LGPD</strong> — dados criptografados, exclusão automática e servidores no Brasil.</span></li>
+                    </ul>
+
+                    <div class="pv-actions">
+                        <a href="https://previanest.com.br" target="_blank" rel="noopener" class="btn btn-navy">
+                            Visitar previanest.com.br
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+                        </a>
+                        <a href="https://previanest.com.br/politica-de-privacidade.html" target="_blank" rel="noopener" class="btn btn-line">Política de privacidade</a>
+                    </div>
+                </div>
+
+                <div class="pv-device" aria-hidden="true">
+                    <div class="pv-screen">
+                        <div class="pv-app-icon"><span>P</span></div>
+                        <div class="pv-app-name">Previanest</div>
+                        <div class="pv-app-sub">Pré-Anestésica · Brasil</div>
+                        <div class="pv-pills">
+                            <div class="pv-pill"><span class="dot"></span>Ficha do paciente</div>
+                            <div class="pv-pill"><span class="dot"></span>Escores clínicos</div>
+                            <div class="pv-pill"><span class="dot"></span>Dosagens &amp; protocolos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="pv-disclaimer">
+                O Previanest é uma ferramenta de referência clínico-educacional. Não constitui prontuário médico, não realiza sugestões diagnósticas ou terapêuticas e não substitui o julgamento clínico do profissional nem a consulta médica presencial obrigatória.
+            </p>
+        </div>
+    </section>
+
+    <!-- CREDENCIAIS -->
+    <section id="credenciais">
+        <div class="container">
+            <div class="eyebrow">Credenciais</div>
+            <h2 class="section-title">Formação e registro profissional.</h2>
+            <p class="section-lede">
+                Atuação médica regular, com formação iniciada em centro europeu de referência e prática contínua em anestesiologia.
+            </p>
+
+            <div class="cred-grid">
+                <div class="cred">
+                    <div class="label">Profissional responsável</div>
+                    <div class="value">Dr. Luiz Eduardo Costa</div>
+                    <div class="meta">Médico — atuação em anestesiologia</div>
+                </div>
+                <div class="cred">
+                    <div class="label">Registro CRM</div>
+                    <div class="value">CRM/PR&nbsp;40.367</div>
+                    <div class="meta">Conselho Regional de Medicina do Paraná</div>
+                </div>
+                <div class="cred">
+                    <div class="label">Formação inicial</div>
+                    <div class="value">Anestesiologia · Alemanha</div>
+                    <div class="meta">2019 — 2021</div>
+                </div>
+                <div class="cred">
+                    <div class="label">Empresa</div>
+                    <div class="value">Luiz Eduardo Costa Serviços Médicos LTDA</div>
+                    <div class="meta">CNPJ 53.911.561/0001-09 · Brasil</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+        <div class="container">
+            <div class="contact-card">
+                <div class="eyebrow" style="justify-content:center;">Contato</div>
+                <h2>Vamos conversar.</h2>
+                <p>
+                    Para agendamentos, consultas pré-anestésicas, parcerias hospitalares ou orientações profissionais, escreva diretamente. Respondo em horário comercial.
+                </p>
+                <a class="contact-email" href="mailto:contato@lecsm.com.br">contato@lecsm.com.br</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div>
+                    <div class="footer-brand">Luiz Eduardo Costa Serviços Médicos LTDA</div>
+                    <div class="footer-meta">
+                        CRM/PR 40.367 · CNPJ 53.911.561/0001-09<br>
+                        Anestesiologia · Avaliação pré-anestésica · Manejo da dor
+                    </div>
+                </div>
+                <div class="footer-meta" style="text-align:right;">
+                    <a href="mailto:contato@lecsm.com.br">contato@lecsm.com.br</a><br>
+                    <span style="color:rgba(255,255,255,0.4);">Brasil</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© <span id="year"></span> Luiz Eduardo Costa Serviços Médicos. Todos os direitos reservados.</span>
+                <span>Este site tem caráter informativo e não substitui consulta médica.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
