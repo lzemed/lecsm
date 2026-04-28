@@ -683,11 +683,14 @@
 
         .cred-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 48px;
             margin-top: 24px;
         }
-        @media (max-width: 720px) {
+        @media (max-width: 900px) {
+            .cred-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+        }
+        @media (max-width: 600px) {
             .cred-grid { grid-template-columns: 1fr; gap: 32px; }
         }
         .cred {
@@ -820,7 +823,7 @@
     <header id="top" class="hero">
         <div class="hero-grid">
             <div>
-                <div class="hero-eyebrow">Anestesiologia &middot; desde a Alemanha</div>
+                <div class="hero-eyebrow">Anestesiologia simples, para todos</div>
                 <h1>Cuidado anestésico com <em>presença, técnica</em> e respeito ao paciente.</h1>
                 <p class="hero-sub">
                     Serviços médicos em anestesiologia conduzidos com ética, profissionalismo e atualização científica permanente. Cada procedimento começa com uma escuta atenta — porque conforto e segurança caminham juntos.
@@ -862,8 +865,8 @@
 
                     <div class="about-stats">
                         <div class="stat">
-                            <div class="num">DE</div>
-                            <div class="lbl">Início na Alemanha</div>
+                            <div class="num">2019</div>
+                            <div class="lbl">Formação internacional</div>
                         </div>
                         <div class="stat">
                             <div class="num">24/7</div>
@@ -1031,11 +1034,6 @@
                     <div class="label">Registro CRM</div>
                     <div class="value">CRM/PR&nbsp;40.367</div>
                     <div class="meta">Conselho Regional de Medicina do Paraná</div>
-                </div>
-                <div class="cred">
-                    <div class="label">Formação inicial</div>
-                    <div class="value">Anestesiologia · Alemanha</div>
-                    <div class="meta">2019 — 2021</div>
                 </div>
                 <div class="cred">
                     <div class="label">Empresa</div>
